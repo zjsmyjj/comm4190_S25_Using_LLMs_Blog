@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "comm4190_S24_Using_LLMs_Blog"
+  title: "My Explorations with LLMs"
   navbar:
     right:
       - about.qmd
@@ -15,5 +15,7 @@ format:
     theme: cosmo
     css: styles.css
 
+execute:
+  freeze: auto
 
 

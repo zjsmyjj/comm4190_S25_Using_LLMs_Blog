@@ -1,16 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/001_intro/index.html",
+    "href": "posts/001_intro/index.html",
+    "title": "It’s just a fact",
     "section": "",
-    "text": "About this blog"
+    "text": "Testing\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "comm4190_S24_Using_LLMs_Blog",
     "section": "",
-    "text": "No matching items"
+    "text": "It’s just a fact\n\n\n\n\n\n\n\n\n\n\n\nMay 24, 2023\n\n\nMatthew Brook O’Donnell\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
   }
 ]

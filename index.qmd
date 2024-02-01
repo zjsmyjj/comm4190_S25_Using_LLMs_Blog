@@ -1,5 +1,5 @@
 ---
-title: "comm4190_S24_Using_LLMs_Blog"
+title: "My Explorations with LLMs"
 listing:
   contents: posts
   sort: "date desc"

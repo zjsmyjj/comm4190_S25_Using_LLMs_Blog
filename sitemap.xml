@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-02-01T21:05:01.785Z</lastmod>
+    <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-02-19T05:06:54.293Z</lastmod>
   </url>
   <url>
     <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_test_post/Post_0201.html</loc>
-    <lastmod>2025-02-01T21:05:01.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-02-01T21:05:01.784Z</lastmod>
+    <lastmod>2025-02-19T05:06:54.294Z</lastmod>
   </url>
   <url>
     <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-02-01T21:05:01.784Z</lastmod>
+    <lastmod>2025-02-19T05:06:54.293Z</lastmod>
   </url>
   <url>
-    <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_test_post/test_post_0129.html</loc>
-    <lastmod>2025-02-01T21:05:01.798Z</lastmod>
+    <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-02-19T05:06:54.294Z</lastmod>
   </url>
   <url>
     <loc>https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_test_post/Test post.html</loc>
-    <lastmod>2025-02-01T21:05:01.786Z</lastmod>
+    <lastmod>2025-02-19T05:06:54.294Z</lastmod>
   </url>
 </urlset>

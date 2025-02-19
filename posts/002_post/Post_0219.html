@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Qijia">
+<meta name="dcterms.date" content="2024-02-18">
+<meta name="description" content="Try SUNO to create some songs">
 
-<title>My Explorations with LLMs – My Exploration with LLMs</title>
+<title>Use AI to create songs – My Exploration with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Exploration with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,200 +115,67 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Use AI to create songs</h1>
+                  <div>
+        <div class="description">
+          Try SUNO to create some songs
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">Music</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Qijia </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 18, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TXVzaWM=">Music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZmVhcg==">fear <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGVyc3Vhc2lvbg==">persuasion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>I have not used any AI to create any audio and I do like pop musci a lot. So I tried to use <a href="https://suno.com/">SUNO</a>, an AI tool that can create songs. It seems that SUNO creates songs based on the lyric and music style chosen by the user. First, I asked ChatGPT-4o to create some lyrics for me. Here is the prompt: &gt; Can you create lyrics that tell a story about forbidden love between two good friends?</p>
+<p>Here are the lyrics created by ChatGPT-4o: &gt; “Almost, But Never” &gt; &gt;(Verse 1) We were always side by side, Laughing ’til the tears ran dry. Late-night talks and reckless dreams, Never thought of you that way—until now, it seems. &gt; &gt;(Pre-Chorus) But the way your eyes linger a little too long, And the way my heart beats when you say my name… We’re standing on the edge of something so wrong, But tell me, does it feel the same? &gt; &gt;(Chorus) Almost, but never, we dance on the line, A love left unspoken, a heart that’s confined. Too close to be strangers, too far to be more, A love we can’t touch, though it’s knocking the door. &gt; &gt;(Verse 2) I’ve memorized your every scar, Every hope, every broken star. You’re my safe place, my sweetest sin, And I don’t know where I end or where you begin. &gt; &gt;(Pre-Chorus) But the world keeps saying that this isn’t right, That some lines aren’t meant to be crossed… But tell me why, when you hold me that tight, The rest of the world just feels lost? &gt; &gt;(Chorus) Almost, but never, we dance on the line, A love left unspoken, a heart that’s confined. Too close to be strangers, too far to be more, A love we can’t touch, though it’s knocking the door. &gt; &gt;(Bridge) If I met you in another life, Would we be free to burn too bright? Would we love without a fear, Or would it still end here? &gt; &gt;(Final Chorus – Soft &amp; Emotional) Almost, but never, we whisper goodbyes, Two souls intertwined but lost in disguise. I’ll love you in silence, I’ll love you in vain, But I’ll love you forever—even if it’s in pain. &gt; &gt;(Outro – Fading) Almost, but never… We were almost, but never…</p>
+<p>But I do not like this version of lyrics and asked ChatGPT-4o to revise them: &gt; Can you make the lyrics less cheesy?</p>
+<p>And here are the final version of lyrics: &gt;“Unspoken” (Verse 1) We built a home in borrowed time, Laughed our way through crooked lines. Never questioned where we stood— Until the silence felt too good. &gt; &gt;(Pre-Chorus) Your name stays careful on my lips, A weight I carry, never slip. We move like shadows side by side, Too much to hold, too much to hide. &gt; &gt;(Chorus) So we stay where no one asks, Where glances speak but hands don’t clasp. A love unshaped, undefined, A thread that pulls but never ties. &gt; &gt;(Verse 2) The world we made was safe and small, No need for answers, none at all. But something lingers, sharp and slow, A thought that neither dares to know. &gt; &gt;(Pre-Chorus) Your breath too close, the space too thin, A fault line under quiet skin. We learn the steps, we play the part, And no one knows the cost to heart. &gt; &gt;(Chorus) So we stay where no one asks, Where glances speak but hands don’t clasp. A love unshaped, undefined, A thread that pulls but never ties. &gt; &gt;(Bridge) If not in this life, then when? If not as lovers, then as what? I can’t rewrite the start of this, But I would, I would. &gt; &gt;(Final Chorus – Fading) So we stay where no one asks, Where love dissolves but never lacks. A weight, a wish, a closing door, A love that almost was—no more.</p>
+<p>Then I entered the GPT-generated lyrics to SUNO and selected “classic rock” and “nostalgia” as style of music. I noticed that SUNO did not recognize an artist’s name. So it is impossible that I can ask it to generate a song similar to those created by my favorite artists. I am not sure the absence of this function is due to the cocern of copyright or the limits of AI technique.</p>
+<p>Here is the song “Unspoken” created by SUNO: https://suno.com/song/f3a8629d-151c-40bc-814b-c0d20aadbb90</p>
+<p>It seems that SUNO also did not well recognize the style of “classic rock” or the vibe of “nostalgia.” Probably it only includes some basic music styles like “country” and “rock.” But to be honest, the quality of the song is quite good except that the AI voice sounds a little non-human.</p>
+<p>Then I wondered what will happen if I used the lyrics that have been already used in a popular song. Can the AI-generated song sound like the orignial one? This time I selected a Chinese song 催眠 (“Hypnotize”) by <a href="https://en.wikipedia.org/wiki/Faye_Wong">Faye Wong</a> and used its lyrics to create a new version on SUNO. The style of music was “dream pop.”</p>
+<p>Here is the new version of the song “Hyponotize” created by SUNO: https://suno.com/song/a1e07f75-e974-4a86-a8e8-52520c82ef04</p>
+<p>Again, the music of style still not worked very well and the texture of the voice was still like auto-tuned. The song was similar to the original one in terms of its rhythm. This might be the result of entering lyrics line by line in the system so that AI can recognize the start and stop of each line. But overall, the quality of the song was decent.</p>
+<p>There are more advanced options on SUNO like copying the voice and style of a song to a new song, but I did not want to pay for these services currently. As AI deveolps rapidly, songs may be generated more effectively by AI.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2ZlYXIlMkNwZXJzdWFzaW9u" data-listing-date-sort="1738368000000" data-listing-file-modified-sort="1739941958463" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
-<div class="thumbnail">
-<p><a href="./posts/001_test_post/Post_0201.html" class="no-external"></a></p><a href="./posts/001_test_post/Post_0201.html" class="no-external">
-<p class="card-img-top"><img src="posts/001_test_post/gpt0.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/001_test_post/Post_0201.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_test_post/Post_0201.html" class="no-external">Do fear appeals improve LLMs’ performance?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_test_post/Post_0201.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmVhcg=='); return false;">
-fear
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyc3Vhc2lvbg=='); return false;">
-persuasion
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_test_post/Post_0201.html" class="no-external">Using fear appeals in prompts to generate more effective fear appeals!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_test_post/Post_0201.html" class="no-external">
-<div class="listing-date">
-Feb 1, 2025
-</div>
-<div class="listing-author">
-Qijia Ye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="QUklMkNNdXNpYw==" data-listing-date-sort="1708214400000" data-listing-file-modified-sort="1739941958476" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="852">
-<div class="thumbnail">
-<p><a href="./posts/002_post/Post_0219.html" class="no-external"></a></p><a href="./posts/002_post/Post_0219.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/002_post/Post_0219.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_post/Post_0219.html" class="no-external">Use AI to create songs</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_post/Post_0219.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TXVzaWM='); return false;">
-Music
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_post/Post_0219.html" class="no-external">Try SUNO to create some songs</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_post/Post_0219.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2024
-</div>
-<div class="listing-author">
-Qijia
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1739941958462" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1739941958463" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="./posts/001_test_post/Test post.html" class="no-external"></a></p><a href="./posts/001_test_post/Test post.html" class="no-external">
-<p class="card-img-top"><img src="posts/001_test_post/tnb_10.jpeg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/001_test_post/Test post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_test_post/Test post.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_test_post/Test post.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_test_post/Test post.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_test_post/Test post.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

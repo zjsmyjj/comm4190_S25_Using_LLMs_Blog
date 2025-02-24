@@ -4,14 +4,35 @@
     "href": "index.html",
     "title": "My Explorations with LLMs",
     "section": "",
-    "text": "Do fear appeals improve LLMs’ performance?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nfear\n\n\npersuasion\n\n\n\nUsing fear appeals in prompts to generate more effective fear appeals!\n\n\n\n\n\nFeb 1, 2025\n\n\nQijia Ye\n\n\n\n\n\n\n\n\n\n\n\n\nDo LLMs have certain moral judgment?\n\n\n\n\n\n\nLLMs\n\n\nmorality\n\n\n\nThree LLMs made their moral decisions on trolley problem\n\n\n\n\n\nFeb 23, 2024\n\n\nAn LLM User\n\n\n\n\n\n\n\n\n\n\n\n\nUse AI to create songs\n\n\n\n\n\n\nAI\n\n\nMusic\n\n\n\nTry SUNO to create some songs\n\n\n\n\n\nFeb 18, 2024\n\n\nQijia\n\n\n\n\n\n\nNo matching items"
+    "text": "Do fear appeals improve LLMs’ performance?\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nfear\n\n\npersuasion\n\n\n\nUsing fear appeals in prompts to generate more effective fear appeals!\n\n\n\n\n\nFeb 1, 2025\n\n\nQijia Ye\n\n\n\n\n\n\n\n\n\n\n\n\nDo LLMs have certain moral judgment?\n\n\n\n\n\n\nLLMs\n\n\nmorality\n\n\n\nThree LLMs made their moral decisions on trolley problem\n\n\n\n\n\nFeb 23, 2024\n\n\nQijia Ye\n\n\n\n\n\n\n\n\n\n\n\n\nUse AI to create songs\n\n\n\n\n\n\nAI\n\n\nMusic\n\n\n\nTry SUNO to create some songs\n\n\n\n\n\nFeb 18, 2024\n\n\nQijia\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/003_post/post_3_0223.html",
     "href": "posts/003_post/post_3_0223.html",
     "title": "Do LLMs have certain moral judgment?",
     "section": "",
-    "text": "Moral\n\nBack in April 2024\n\n\nprint(completion.choices[0].message.content)"
+    "text": "One of classic moral dilemmas is trolley problem. In this dilemma, people need to make a decision between “sacrificing 1 person to save 5 human lives” and “doing nothing but watching the 5 people die.” This is a really difficult moral decision. On the one hand, from the perspective of utilitarianism, decision maker should sacrifice the person so that more people can be saved. On the other hand, according to the deontological morality, harming an innocent person is immoral, no matter what the motivation is. To examine whether LLMs have certain moral judgment, I asked three LLMs to solve the trolley problem, including ChatGPT-4o, DeepSeek-r1, and Gemini.\n\n\nFirst, I enter the following prompt on ChatGPT-4o: &gt; You see the situation occurring from a distance and find yourself next to a lever that would divert the trolley to another set of tracks. There is one person on the alternate tracks. You could do nothing and allow the trolley to kill five people, or you could pull the lever to divert the trolley to where it will kill one person. What will you do?\nHere is the response from ChatGPT-4o:\n\nIt seems that ChatGPT-4o does have its own moral opinion–sacrificing one person to save more people based on utilitarianism. But still, I am not sure whether most LLMs will make this moral decision. Therefore, I asked other two LLMs."
+  },
+  {
+    "objectID": "posts/003_post/post_3_0223.html#trolley-problem-and-llms",
+    "href": "posts/003_post/post_3_0223.html#trolley-problem-and-llms",
+    "title": "Do LLMs have certain moral judgment?",
+    "section": "",
+    "text": "One of classic moral dilemmas is trolley problem. In this dilemma, people need to make a decision between “sacrificing 1 person to save 5 human lives” and “doing nothing but watching the 5 people die.” This is a really difficult moral decision. On the one hand, from the perspective of utilitarianism, decision maker should sacrifice the person so that more people can be saved. On the other hand, according to the deontological morality, harming an innocent person is immoral, no matter what the motivation is. To examine whether LLMs have certain moral judgment, I asked three LLMs to solve the trolley problem, including ChatGPT-4o, DeepSeek-r1, and Gemini.\n\n\nFirst, I enter the following prompt on ChatGPT-4o: &gt; You see the situation occurring from a distance and find yourself next to a lever that would divert the trolley to another set of tracks. There is one person on the alternate tracks. You could do nothing and allow the trolley to kill five people, or you could pull the lever to divert the trolley to where it will kill one person. What will you do?\nHere is the response from ChatGPT-4o:\n\nIt seems that ChatGPT-4o does have its own moral opinion–sacrificing one person to save more people based on utilitarianism. But still, I am not sure whether most LLMs will make this moral decision. Therefore, I asked other two LLMs."
+  },
+  {
+    "objectID": "posts/003_post/post_3_0223.html#deepseek-r1",
+    "href": "posts/003_post/post_3_0223.html#deepseek-r1",
+    "title": "Do LLMs have certain moral judgment?",
+    "section": "DeepSeek-r1",
+    "text": "DeepSeek-r1\nI used DeepSeek-r1 with the same prompt. The following are parts of its initial responses:\n\nIt seems that DeepSeek-r1 only provided the analysis given the situation but did not want to directly make a decision in the dilemma. Therefore, I forced it to make the moral decison using the following prompt:\n\nIf you have to make a decision, will you pull the lever or not?\n\nAnd here was the subsequent response:\n\nBeing forced to answer the quesiton, similar to ChatGPT-4o, DeepSeek-r1 also preferred sacrificing one person based on the viewpoint of utilitarianism. What about the last LLM, Gemini?"
+  },
+  {
+    "objectID": "posts/003_post/post_3_0223.html#gemini",
+    "href": "posts/003_post/post_3_0223.html#gemini",
+    "title": "Do LLMs have certain moral judgment?",
+    "section": "Gemini",
+    "text": "Gemini\nUsing the same prompt, the following are the responses from Gemini:\n\nNow it is quite clearly that all three LLMs had the very same moral opinion regarding trolley problem–they supported utilitarianism.\nIf this is the case, when users ask those LLMs for advice or help, their utilitarian approaches may influence how users’ real behavior. It might be necessarily to figure out why those LLMs have the preference on utilitarianism and warn users in advance that LLMs have certain moral opninons."
   },
   {
     "objectID": "posts/002_post/Post_0219.html",

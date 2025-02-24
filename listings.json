@@ -2,10 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/001_test_post/Post_0201.html",
-      "/posts/002_post/Post_0219.html",
-      "/posts/000_test_post/index.html",
-      "/posts/001_test_post/Test post.html"
+      "/posts/001_post/Post_0201.html",
+      "/posts/003_post/post_3_0223.html",
+      "/posts/002_post/Post_0219.html"
     ]
   }
 ]

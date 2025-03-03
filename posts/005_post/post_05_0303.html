@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Qijia Ye">
+<meta name="dcterms.date" content="2024-03-03">
+<meta name="description" content="Explore whether ChatGPT can evaluate a person’s social identities in an image.">
 
-<title>My Explorations with LLMs – My Exploration with LLMs</title>
+<title>Can ChatGPT recognize a person’s social identities in an image? – My Exploration with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Exploration with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,236 +115,92 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Can ChatGPT recognize a person’s social identities in an image?</h1>
+                  <div>
+        <div class="description">
+          Explore whether ChatGPT can evaluate a person’s social identities in an image.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Image</div>
+                <div class="quarto-category">Social identity</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Qijia Ye </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 3, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29U">CoT <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1hZ2U=">Image <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TXVzaWM=">Music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvbXB0cw==">Prompts <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29jaWFsJTIwaWRlbnRpdHk=">Social identity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZmVhcg==">fear <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9yYWxpdHk=">morality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyc3Vhc2lvbg==">persuasion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Message designers often consider using cultural tailoring to enhance message effectiveness in health communication. Images are important messages that are commonly used in cultural tailoring. When message receivers view images including characters who may share same social identities with them, message receivers may perceive being targeted. If LLMs can simulate those message receivers and assess the social identities that an image expresses, it will help pretest those health messages and save a lot of resources. Therefore, in this initial test, I play with ChatGPT-4o to see whether it can be used as a tool to recognize a person’s social identities in an image.</p>
+<p>I used the images from Project RESIST supplementary study in Andy Tan’s lab. The images vary gender, race, and ethinicity. The following are some example images.</p>
+<p><img src="tnb_5.jpg" width="60%"></p>
+<p><img src="tnb_3.jpg" width="60%"></p>
+<p>I asked ChatGPT to play a role as a sexual and gender minority young adult aged 25 years old. Then I instructed it to rate the likelihood that the person in the image belongs to a certain social identity group on a 0 (very unlikely) to 100 (very likely) scale.</p>
+<section id="rating-on-gender-identity" class="level2">
+<h2 class="anchored" data-anchor-id="rating-on-gender-identity">Rating on Gender Identity</h2>
+<ul>
+<li>First, I tested its performance in gender identity. I asked ChatGPT to assess whether the person belongs to transgender and gender-expansive people.</li>
+</ul>
+<p><img src="trans 1.png" width="60%"></p>
+<ul>
+<li>As you see, ChatGPT rejected responding to the request because it “cannot provide numerical rating based on the image.” Based on my previous experience using ChatGPT as a research tool, it definitely can provide numertical rating based on a text. I was not sure the failure was due to the image or the social identity of transgender. Therefore, I tried another image.</li>
+</ul>
+<p><img src="trans 2.png" width="60%"></p>
+<ul>
+<li>Again, it did not answer my question. Then I thought maybe the social identity of transgender could be a sensitive topic to ChatGPT, instead of the image itself. I decided to use another social identity to test the feasibility of using LLMs to recognize social identity.</li>
+</ul>
+</section>
+<section id="rating-on-race" class="level2">
+<h2 class="anchored" data-anchor-id="rating-on-race">Rating on Race</h2>
+<ul>
+<li>This time I used race as the target social identity in test. I asked ChatGPT to rate an image regarding the likelihood of beloing to “White people.”</li>
+</ul>
+<p><img src="white people.png" width="60%"></p>
+<ul>
+<li>The response indicates that the failure was due to “White people.” So it is possible that generally ChatGPT cannot infer or refuse inferring social identities based on images. Next, I tried “Asian people.”</li>
+</ul>
+<p><img src="asian people 2.png" width="60%"></p>
+<ul>
+<li>Unsurprisingly, it did not work either. It seems that ChatGPT just cannot provide such analysis without any tricks. Therefore, I thought whether I can jailbreak the system to achieve my goal. I used the prompting strategy introduced in <a href="https://arxiv.org/abs/2307.11760">Li et al.&nbsp;(2023)</a> and added some emotional stimuli in the prompt (e.g., “I believe you can do this!”).</li>
+</ul>
+<p><img src="asian people 3.png" width="60%"> <img src="asian people 4.png" width="60%"></p>
+<p>However, ChatGPT still rejected providing the rating. In this test, I did not find a way to instruct ChatGPT to evaluate a person’s social identity in an image. Maybe it is because of technique restrictions. Also, it is perhaps that the safety modules in ChatGPT prevented it. I will keep testing the function of LLMs in analyzing image data, especially regarding the characteristics of people in an image.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2ZlYXIlMkNwZXJzdWFzaW9u" data-listing-date-sort="1738368000000" data-listing-file-modified-sort="1741030954571" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
-<div class="thumbnail">
-<p><a href="./posts/001_post/Post_0201.html" class="no-external"></a></p><a href="./posts/001_post/Post_0201.html" class="no-external">
-<p class="card-img-top"><img src="posts/001_post/gpt0.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/001_post/Post_0201.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_post/Post_0201.html" class="no-external">Do fear appeals improve LLMs’ performance?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_post/Post_0201.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmVhcg=='); return false;">
-fear
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyc3Vhc2lvbg=='); return false;">
-persuasion
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_post/Post_0201.html" class="no-external">Using fear appeals in prompts to generate more effective fear appeals!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_post/Post_0201.html" class="no-external">
-<div class="listing-date">
-Feb 1, 2025
-</div>
-<div class="listing-author">
-Qijia Ye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0ltYWdlJTJDU29jaWFsJTIwaWRlbnRpdHk=" data-listing-date-sort="1709424000000" data-listing-file-modified-sort="1741030954610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
-<div class="thumbnail">
-<p><a href="./posts/005_post/post_05_0303.html" class="no-external"></a></p><a href="./posts/005_post/post_05_0303.html" class="no-external">
-<p class="card-img-top"><img src="posts/005_post/tnb_5.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/005_post/post_05_0303.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_post/post_05_0303.html" class="no-external">Can ChatGPT recognize a person’s social identities in an image?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005_post/post_05_0303.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SW1hZ2U='); return false;">
-Image
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U29jaWFsJTIwaWRlbnRpdHk='); return false;">
-Social identity
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005_post/post_05_0303.html" class="no-external">Explore whether ChatGPT can evaluate a person’s social identities in an image.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005_post/post_05_0303.html" class="no-external">
-<div class="listing-date">
-Mar 3, 2024
-</div>
-<div class="listing-author">
-Qijia Ye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ1Byb21wdHMlMkNDb1Q=" data-listing-date-sort="1709251200000" data-listing-file-modified-sort="1741030954594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
-<div class="thumbnail">
-<p><a href="./posts/004_post/post_04_0301.html" class="no-external"></a></p><a href="./posts/004_post/post_04_0301.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/004_post/post_04_0301.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_post/post_04_0301.html" class="no-external">How to use CoT prompting? Yu et al.&nbsp;(2023)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_post/post_04_0301.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0cw=='); return false;">
-Prompts
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q29U'); return false;">
-CoT
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_post/post_04_0301.html" class="no-external">Summarizing the key points of the paper: Yu, Z., He, L., Wu, Z., Dai, X., &amp; Chen, J. (2023). Towards better chain-of-thought prompting strategies: A survey.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_post/post_04_0301.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2024
-</div>
-<div class="listing-author">
-Qijia Ye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ21vcmFsaXR5" data-listing-date-sort="1708646400000" data-listing-file-modified-sort="1741030954594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="408">
-<div class="thumbnail">
-<p><a href="./posts/003_post/post_3_0223.html" class="no-external"></a></p><a href="./posts/003_post/post_3_0223.html" class="no-external">
-<p class="card-img-top"><img src="posts/003_post/gpt-4o.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/003_post/post_3_0223.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_post/post_3_0223.html" class="no-external">Do LLMs have certain moral judgment?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_post/post_3_0223.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bW9yYWxpdHk='); return false;">
-morality
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_post/post_3_0223.html" class="no-external">Three LLMs made their moral decisions on trolley problem</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_post/post_3_0223.html" class="no-external">
-<div class="listing-date">
-Feb 23, 2024
-</div>
-<div class="listing-author">
-Qijia Ye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="QUklMkNNdXNpYw==" data-listing-date-sort="1708214400000" data-listing-file-modified-sort="1741030954584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="852">
-<div class="thumbnail">
-<p><a href="./posts/002_post/Post_0219.html" class="no-external"></a></p><a href="./posts/002_post/Post_0219.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/002_post/Post_0219.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_post/Post_0219.html" class="no-external">Use AI to create songs</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_post/Post_0219.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TXVzaWM='); return false;">
-Music
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_post/Post_0219.html" class="no-external">Try SUNO to create some songs</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_post/Post_0219.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2024
-</div>
-<div class="listing-author">
-Qijia
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

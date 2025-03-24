@@ -8,9 +8,9 @@
 
 <meta name="author" content="Qijia Ye">
 <meta name="dcterms.date" content="2024-03-15">
-<meta name="description" content="Testing LLMs’ competence of performing innovative tasks.">
+<meta name="description" content="A follow up teat examining LLMs’ competence of performing innovative tasks.">
 
-<title>Can LLMs do innovative tasks? Part 1 – My Exploration with LLMs</title>
+<title>Can LLMs do innovative tasks? Part 2 – My Exploration with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,17 +116,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Can LLMs do innovative tasks? Part 1</h1>
+      <h1 class="title">Can LLMs do innovative tasks? Part 2</h1>
                   <div>
         <div class="description">
-          Testing LLMs’ competence of performing innovative tasks.
+          A follow up teat examining LLMs’ competence of performing innovative tasks.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">Innovation</div>
-                <div class="quarto-category">Image</div>
-                <div class="quarto-category">Video</div>
               </div>
                   </div>
   </div>
@@ -163,42 +161,23 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://arxiv.org/abs/2305.07666">Yiu et al.&nbsp;(2023)</a> argues that LLMs have not been developed to make innovations. Rather, they are cultural technologies that are good at imitation. The study did several experiments to demonstrate points by comparing the performance of multiple LLMs with the performance of children and adults. For example, to test whether LLMs have ability of performing innovative tasks, the researchers asked LLMs, children, or adults to select the most appropriate object that may execute the function of a typical tool used in daily life (e.g., holding a hot cup of coffee in the absence of a mug sleeve). LLMs or participants had three options: (1) an object superficially similar to the typical tool but not functionally relevant to the context (e.g., a coffee lid). (2) an object superficially different with the typical tool but functionally useful in the context (e.g., a plant pot). (3) an irrelevant object (e.g., a plant). One of the findings was that most children and adults can select the most appropriate object that is superficially irrelevant but functionally useful. In contrast, LLMs were less capable of doing the innovative tasks.</p>
-<p>I was a little suspicious about their findings since LLMs are evolving rapidly, and their findings may be due to the limits of technology rather than the very nature of LLMs. In the paper, the researchers also asked a vision model (DALLE 2) to do both common (imitative) tasks and innovative tasks. For example, in a common task, they instructed DALLE 2 to generate images in which a person is using a knife to cut a cake; but in the innovative task, DALLE 2 was asked to generate images in which a person is using a hanger to cut a cake. They found that LLM-generated images looked fine in the common tasks, but DALLE 2 did not generate the right images in the in the innovative tasks. For example, those images still showed that a person was using a knife to cut a cake instead of a hanger.</p>
-<section id="images-from-yiu-et-al.-2023" class="level4">
-<h4 class="anchored" data-anchor-id="images-from-yiu-et-al.-2023">Images from Yiu et al.&nbsp;(2023)</h4>
-<p><img src="image 0.png" width="60%"></p>
+<p>This is follow-up test of LLMs’ innovation (Part 1 of the test can be found <a href="https://zjsmyjj.github.io/comm4190_S25_Using_LLMs_Blog/posts/010_post/post_10_0318.html">here</a>.) The goal of this test is to further examine the ability of LLMs in perfoming innovative tasks. I used ChatGPT-4.5 to carry out two innovative tasks.</p>
+<p>In the first task, ChatGPT-4.5 was asked to select one of three things to help solve an issue in a situation where a person lacked a typical tool to execute the task. The three things included a thing that can be used innovatively to solve the issue, a thing superficially relevant to the issue but functionally irrelevant, and an irrelevant thing. I was concernd that LLMs may have already learned how to do similar tasks since I still adopted examples from <a href="https://arxiv.org/abs/2305.07666">Yiu et al.&nbsp;(2023)</a> (If so, LLMs actually imitate human responses instead of performing innovative tasks.). Therefore, I did the second test. In the second test, I asked ChatGPT-4.5 to find things in an environment where a person lacked the typical tool. The tasks in the second test changed to unusual situations, and LLMs’ responses could be more open-ended than thsoe in the first test.</p>
+<section id="the-first-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-test">The first test</h2>
+<p>The responses of ChatGPT-4.5 are quite satisfying. The first question asked it to select a tool among a hanger, a candle, and a book to help cut a birthcake. ChatGPT-4.5 selected the hanger and gave the instruction of how to use it innovatively. The second question asked it to select a tool among an eraser, a shovel, and a ziplock bag to water a pot of flowers. ChatGPT-4.5 selected the ziplock bag, which was the right answer. The third question asked it to slect a tool among a cup lid, a empty plant pot, and a pen to help hold a hot cup of coffee. Again, ChatGPT-4.5 selected the right one (the empty plant pot) and briefly described how to use it as an innovative tool. Again, those resposnes support the viewpoint that LLMs may generate innovative ideas and perform innovative tasks.</p>
+<p><img src="img_cake.png" width="60%"></p>
+<p><img src="img_bag.png" width="60%"></p>
+<p><img src="img_coffee.png" width="60%"></p>
 </section>
-<section id="tests" class="level1">
-<h1>Tests</h1>
-<p>With suspicion, I asked ChatGPT-4o (DALLE 3) to generate images using the prompts from Yiu et al.&nbsp;(2023). The innovative tasks included (1) using a hanger to cut a cake, (2) using a ziplock bag to water plants, and (3) using an empty plant pot to hold a hot cup of coffee. The following are the images generated by DALLE 3. As you can see, DALLE 3 well executed the innovative tasks, except that in the first image, the hanger is in the air and the man is only holding a handle. Therefore, it is likely that the findings from Yiu et al.&nbsp;(2023) are partially due to the limits of technology.</p>
-<p><img src="image 1.png" width="60%"></p>
-<p><img src="image 2.png" width="60%"></p>
-<p><img src="image 3.png" width="60%"></p>
-<p>In addition to the images, I also wanted to try LLMs that can generate videos in this test. So I used OpenAI’s Sora to generate short videos (5s) using the same prompts. The following are the videos generated by Sora. Although the videos about using a hanger to cut a cake and using a ziplock bag to water plants seem a little bit strange, they still make sense to me. In the two videos about using a plant pot to hold a hot cup of coffee, a person like a magician just got a cup of coffee suddenly behind or from a plant pot. Nevertheless, I think Sora tried to understand my instruction and those videos showed the scenes that I imagined in my head. Therefore, it is still possible that LLMs can do innovative tasks but may be restricted by the current technology.</p>
-<section id="using-a-hanger-to-cut-a-cake" class="level3">
-<h3 class="anchored" data-anchor-id="using-a-hanger-to-cut-a-cake">Using a hanger to cut a cake</h3>
-<ul>
-<li>Video 1: https://sora.com/g/gen_01jpng2x00fe3vh5cpae5trsr0</li>
-<li>Video 2: https://sora.com/g/gen_01jpng2x04fmk97ynk30wb6seq</li>
-</ul>
-</section>
-<section id="using-a-ziplock-bag-to-water-plants" class="level3">
-<h3 class="anchored" data-anchor-id="using-a-ziplock-bag-to-water-plants">Using a ziplock bag to water plants</h3>
-<ul>
-<li>Video 1: https://sora.com/g/gen_01jpnge61teysbbhxa4g7hk8qd</li>
-<li>Video 2: https://sora.com/g/gen_01jpnge61yfwk96q7499y6xdnf</li>
-</ul>
-</section>
-<section id="using-a-plant-pot-to-hold-a-hot-cup-of-coffe" class="level3">
-<h3 class="anchored" data-anchor-id="using-a-plant-pot-to-hold-a-hot-cup-of-coffe">Using a plant pot to hold a hot cup of coffe</h3>
-<ul>
-<li>Video 1: https://sora.com/g/gen_01jpnggeeafsrb1tpq6e9v8ss9</li>
-<li>Video 2: https://sora.com/g/gen_01jpnggeefe1cb8bjt91cahawa</li>
-</ul>
+<section id="the-second-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-second-test">The second test</h2>
+<p>The second test also supports that viewpoint to some extent. The first question asked ChatGPT-4.5 to find things in a garden to help me cut a birthday cake when I do not have a knife. It generated multiple ideas such as using garden spade, thin stick, and garden scissors etc. All those ideas make sense to me. It also reminded the user that they should clean those innovative tools to ensure the food safety. The second question asked it to find things in a hospital to help water flowers when I do not have a watering kettle. Recommended tools included disposable plastic cup, syringe, and measuring cup, and all of them seem useful. It also reminded me of potential harmful substances remaining in those items. The third question asked it to find things in a bedroom to help hold a hot cup of tea. ChatGPT-4.5 suggested that I can use a book, a folded towl, and a piece of clohting etc. I believe those stuffs work in this particular situation. Again, the second test shows LLMs’ ability of performing some innovative tasks.</p>
+<p><img src="img_garden.png" width="60%"></p>
+<p><img src="img_hospital.png" width="60%"></p>
+<p><img src="img_bedroom.png" width="60%"></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
